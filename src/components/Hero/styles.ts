@@ -2,14 +2,14 @@ import styled from 'styled-components'
 import photo from '../../assets/images/nike/nike6.jpg'
 import { colors } from '../../styles'
 
-export const HeroSection = styled.section`
+export const HeroSection = styled.section<{ backgroundImage: string }>`
   height: 350px;
   margin-bottom: 8px;
   position: relative;
 
   .image {
     height: 100%;
-    background-image: url(${photo});
+    background-image: url(${(props) => props.backgroundImage});
     background-size: cover;
     background-position: center 90%;
   }

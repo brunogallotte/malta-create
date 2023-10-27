@@ -23,7 +23,10 @@ const Gallery = () => {
     <>
       <GalleryContent>
         <div className="column">
-          <div className="photo">
+          <div
+            className="photo"
+            onClick={() => navigate('/categories/kawasaki')}
+          >
             <div className="content">
               <h3>Kawasaki</h3>
               <p>View project</p>
@@ -44,14 +47,20 @@ const Gallery = () => {
             </div>
             <img src={nike6} />
           </div>
-          <div className="photo">
+          <div
+            className="photo"
+            onClick={() => navigate('/categories/powerpeak')}
+          >
             <div className="content">
               <h3>Power Peak</h3>
               <p>View project</p>
             </div>
             <img src={power1} />
           </div>
-          <div className="photo">
+          <div
+            className="photo"
+            onClick={() => navigate('/categories/powerpeak')}
+          >
             <div className="content">
               <h3>Power Peak</h3>
               <p>View project</p>
@@ -60,14 +69,20 @@ const Gallery = () => {
           </div>
         </div>
         <div className="column">
-          <div className="photo">
+          <div
+            className="photo"
+            onClick={() => navigate('/categories/kawasaki')}
+          >
             <div className="content">
               <h3>Kawasaki</h3>
               <p>View project</p>
             </div>
             <img src={vulcan4} />
           </div>
-          <div className="photo">
+          <div
+            className="photo"
+            onClick={() => navigate('/categories/kawasaki')}
+          >
             <div className="content">
               <h3>Kawasaki</h3>
               <p>View project</p>
@@ -88,14 +103,20 @@ const Gallery = () => {
             </div>
             <img src={nike22} />
           </div>
-          <div className="photo">
+          <div
+            className="photo"
+            onClick={() => navigate('/categories/powerpeak')}
+          >
             <div className="content">
               <h3>Power Peak</h3>
               <p>View project</p>
             </div>
             <img src={power13} />
           </div>
-          <div className="photo">
+          <div
+            className="photo"
+            onClick={() => navigate('/categories/powerpeak')}
+          >
             <div className="content">
               <h3>Power Peak</h3>
               <p>View project</p>
@@ -104,7 +125,10 @@ const Gallery = () => {
           </div>
         </div>
         <div className="column">
-          <div className="photo">
+          <div
+            className="photo"
+            onClick={() => navigate('/categories/kawasaki')}
+          >
             <div className="content">
               <h3>Kawasaki</h3>
               <p>View project</p>
@@ -118,7 +142,10 @@ const Gallery = () => {
             </div>
             <img src={nike2} />
           </div>
-          <div className="photo">
+          <div
+            className="photo"
+            onClick={() => navigate('/categories/powerpeak')}
+          >
             <div className="content">
               <h3>Power Peak</h3>
               <p>View project</p>
