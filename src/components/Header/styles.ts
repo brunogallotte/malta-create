@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { colors } from '../../styles'
 
@@ -24,10 +25,14 @@ export const NavBar = styled.nav`
     list-style: none;
     text-transform: uppercase;
 
-    li {
+    li,
+    a {
       margin-right: 32px;
       font-weight: bold;
       letter-spacing: 4px;
+      text-decoration: none;
+      color: ${colors.black};
+      cursor: pointer;
     }
   }
 `

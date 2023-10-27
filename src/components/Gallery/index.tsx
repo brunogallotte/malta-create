@@ -1,4 +1,5 @@
 import { GalleryContent, GalleryItem } from './styles'
+import { useNavigate } from 'react-router-dom'
 
 import vulcan1 from '../../assets/images/kawasaki/kawasaki1.jpg'
 import vulcan4 from '../../assets/images/kawasaki/kawasaki4.jpg'
@@ -16,6 +17,8 @@ import power11 from '../../assets/images/powerpeak/powerpeak11.jpg'
 import power13 from '../../assets/images/powerpeak/powerpeak13.jpg'
 
 const Gallery = () => {
+  const navigate = useNavigate()
+
   return (
     <>
       <GalleryContent>
@@ -27,14 +30,14 @@ const Gallery = () => {
             </div>
             <img src={vulcan1} />
           </div>
-          <div className="photo">
+          <div className="photo" onClick={() => navigate('/categories/nike')}>
             <div className="content">
               <h3>Nike</h3>
               <p>View project</p>
             </div>
             <img src={nike4} />
           </div>
-          <div className="photo">
+          <div className="photo" onClick={() => navigate('/categories/nike')}>
             <div className="content">
               <h3>Nike</h3>
               <p>View project</p>
@@ -43,14 +46,14 @@ const Gallery = () => {
           </div>
           <div className="photo">
             <div className="content">
-              <h3>Kawasaki</h3>
+              <h3>Power Peak</h3>
               <p>View project</p>
             </div>
             <img src={power1} />
           </div>
           <div className="photo">
             <div className="content">
-              <h3>Kawasaki</h3>
+              <h3>Power Peak</h3>
               <p>View project</p>
             </div>
             <img src={power7} />
@@ -71,30 +74,30 @@ const Gallery = () => {
             </div>
             <img src={vulcan5} />
           </div>
-          <div className="photo">
+          <div className="photo" onClick={() => navigate('/categories/nike')}>
             <div className="content">
-              <h3>Kawasaki</h3>
+              <h3>Nike</h3>
               <p>View project</p>
             </div>
             <img src={nike1} />
           </div>
-          <div className="photo">
+          <div className="photo" onClick={() => navigate('/categories/nike')}>
             <div className="content">
-              <h3>Kawasaki</h3>
+              <h3>Nike</h3>
               <p>View project</p>
             </div>
             <img src={nike22} />
           </div>
           <div className="photo">
             <div className="content">
-              <h3>Kawasaki</h3>
+              <h3>Power Peak</h3>
               <p>View project</p>
             </div>
             <img src={power13} />
           </div>
           <div className="photo">
             <div className="content">
-              <h3>Kawasaki</h3>
+              <h3>Power Peak</h3>
               <p>View project</p>
             </div>
             <img src={power8} />
@@ -108,16 +111,16 @@ const Gallery = () => {
             </div>
             <img src={vulcan7} />
           </div>
-          <div className="photo">
+          <div className="photo" onClick={() => navigate('/categories/nike')}>
             <div className="content">
-              <h3>Kawasaki</h3>
+              <h3>Nike</h3>
               <p>View project</p>
             </div>
             <img src={nike2} />
           </div>
           <div className="photo">
             <div className="content">
-              <h3>Kawasaki</h3>
+              <h3>Power Peak</h3>
               <p>View project</p>
             </div>
             <img src={power11} />
