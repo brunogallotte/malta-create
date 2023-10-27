@@ -53,9 +53,9 @@ import power17 from '../assets/images/powerpeak/powerpeak17.jpg'
 import power18 from '../assets/images/powerpeak/powerpeak18.jpg'
 
 export type Photo = {
-  id: number
-  category: string
-  url: string
+  id?: number
+  category?: string
+  url?: string
 }
 
 export const photos: Photo[] = [
