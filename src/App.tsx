@@ -1,4 +1,3 @@
-import Header from './components/Header'
 import { GlobalCss } from './styles'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home'

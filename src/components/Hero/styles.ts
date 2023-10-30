@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import photo from '../../assets/images/nike/nike6.jpg'
 import { colors } from '../../styles'
 
 export const HeroSection = styled.section<{ backgroundImage: string }>`

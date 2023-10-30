@@ -1,4 +1,4 @@
-import { GalleryContent, GalleryItem } from './styles'
+import { GalleryContent } from './styles'
 import { useNavigate } from 'react-router-dom'
 
 import vulcan1 from '../../assets/images/kawasaki/kawasaki1.jpg'
