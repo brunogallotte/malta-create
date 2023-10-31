@@ -1,9 +1,9 @@
 import { GlobalCss } from './styles'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home'
-import { Nike } from './pages/nike'
-import { Kawasaki } from './pages/kawasaki'
-import PowerPeak from './pages/powerpeak'
+import { Nike } from './pages/personal/nike'
+import { Kawasaki } from './pages/personal/kawasaki'
+import PowerPeak from './pages/personal/powerpeak'
 import Personal from './pages/personal'
 import Contact from './pages/contact'
 
