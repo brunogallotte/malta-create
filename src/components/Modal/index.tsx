@@ -1,6 +1,5 @@
 import { ModalContainer, ModalContent } from './styles'
 import closeImg from '../../assets/images/icons/close.png'
-import kawasaki1 from '../../assets/images/kawasaki/kawasaki1.jpg'
 
 interface ModalProps {
   openModal: (url: string) => void

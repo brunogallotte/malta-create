@@ -13,11 +13,7 @@ export const GlobalCss = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Satoshi', monospace;
-
-    @font-face {
-      font-family: 'Satoshi'
-      src: url('Satoshi-Regular.otf');
-    }
+    scroll-behavior: smooth;
   }
 
   .container {

@@ -15,6 +15,7 @@ import power7 from '../../assets/images/powerpeak/powerpeak7.jpg'
 import power8 from '../../assets/images/powerpeak/powerpeak8.jpg'
 import power11 from '../../assets/images/powerpeak/powerpeak11.jpg'
 import power13 from '../../assets/images/powerpeak/powerpeak13.jpg'
+import ButtonTop from '../BtnTop'
 
 const Gallery = () => {
   const navigate = useNavigate()
@@ -154,6 +155,7 @@ const Gallery = () => {
           </div>
         </div>
       </GalleryContent>
+      <ButtonTop />
     </>
   )
 }

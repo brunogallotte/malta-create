@@ -6,6 +6,7 @@ import { GalleryProject } from './styles'
 import photo from '../../assets/images/nike/nike6.jpg'
 import Modal from '../../components/Modal'
 import { useState } from 'react'
+import ButtonTop from '../../components/BtnTop'
 
 const nikePhotos: Photo[] = photos.filter(function (photo) {
   return photo.category === 'Nike'
@@ -48,6 +49,7 @@ export const Nike = () => {
       </GalleryProject>
       <Footer />
       <Modal openModal={openModal} closeModal={closeModal} imgUrl={modal.url} />
+      <ButtonTop />
     </>
   )
 }

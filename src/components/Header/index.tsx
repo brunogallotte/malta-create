@@ -15,8 +15,12 @@ const Header = () => (
           <li>
             <Link to="/">overview</Link>
           </li>
-          <li>personal</li>
-          <li>contact</li>
+          <li>
+            <Link to="/categories">personal</Link>
+          </li>
+          <li>
+            <Link to="/contact">contact</Link>
+          </li>
         </ul>
       </NavBar>
     </HeaderBar>

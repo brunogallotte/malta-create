@@ -6,7 +6,7 @@ export const GalleryProject = styled.div`
 
   img {
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     cursor: pointer;
   }
 `
