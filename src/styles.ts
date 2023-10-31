@@ -21,4 +21,12 @@ export const GlobalCss = createGlobalStyle`
     width: 100%;
     margin: 0 auto;
   }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${colors.black};
+  }
 `

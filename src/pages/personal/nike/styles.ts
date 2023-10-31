@@ -8,5 +8,6 @@ export const GalleryProject = styled.div`
     width: 100%;
     margin-bottom: 4px;
     cursor: pointer;
+    transition: filter 1s;
   }
 `

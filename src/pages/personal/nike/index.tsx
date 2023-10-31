@@ -7,20 +7,25 @@ import photo from '../../../assets/images/nike/nike6.jpg'
 import Modal from '../../../components/Modal'
 import { useState } from 'react'
 import ButtonTop from '../../../components/BtnTop'
+import { motion } from 'framer-motion'
 
 const nikePhotos: Photo[] = photos.filter(function (photo) {
   return photo.category === 'Nike'
 })
 
 export const Nike = () => {
-  const [modal, setModal] = useState({ isVisible: false, url: '' })
+  const [modal, setModal] = useState({
+    isVisible: false,
+    url: '',
+    layoutId: ''
+  })
 
-  const openModal = (url: string) => {
-    setModal({ isVisible: true, url })
+  const openModal = (url: string, layoutId: string) => {
+    setModal({ isVisible: true, url, layoutId })
   }
 
   const closeModal = () => {
-    setModal({ isVisible: false, url: '' })
+    setModal({ isVisible: false, url: '', layoutId: '' })
   }
 
   return (
@@ -31,15 +36,42 @@ export const Nike = () => {
         description="lifestyle sports photography"
         backgroundImage={photo}
       />
-      <GalleryProject>
+      <GalleryProject
+        as={motion.div}
+        initial={{ opacity: 0, y: 10, scale: 0.8 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{
+          type: 'tween',
+          ease: 'anticipate',
+          duration: 2,
+          flip: Infinity
+        }}
+      >
         {nikePhotos.map(function (photo) {
           return (
             <div key={photo.id}>
-              <img
+              <motion.img
+                layoutId={`image${photo.id}`}
+                initial={{ scale: 0.6 }}
+                animate={{ scale: 0.9 }}
+                exit={{ scale: 1 }}
+                transition={{
+                  // type: 'spring',
+                  // stifness: 100,
+                  // mass: 1,
+                  // damping: 10,
+                  duration: 0.4
+                }}
+                whileHover={{
+                  scale: 1,
+                  transition: {
+                    duration: 1.5
+                  }
+                }}
                 src={photo.url}
                 onClick={() => {
                   if (photo.url) {
-                    openModal(photo.url)
+                    openModal(photo.url, `image${photo.id}`)
                   }
                 }}
               />
@@ -48,7 +80,12 @@ export const Nike = () => {
         })}
       </GalleryProject>
       <Footer />
-      <Modal openModal={openModal} closeModal={closeModal} imgUrl={modal.url} />
+      <Modal
+        layoutId={modal.layoutId}
+        openModal={openModal}
+        closeModal={closeModal}
+        imgUrl={modal.url}
+      />
       <ButtonTop />
     </>
   )

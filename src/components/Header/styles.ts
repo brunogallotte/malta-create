@@ -9,7 +9,7 @@ export const HeaderBar = styled.div`
   height: 80px;
 
   img {
-    width: 150px;
+    width: 170px;
   }
 
   h1 {

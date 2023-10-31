@@ -43,6 +43,7 @@ export const GalleryContent = styled.div`
 
     .content:hover {
       opacity: 1;
+      backdrop-filter: blur(1px);
     }
   }
 `
