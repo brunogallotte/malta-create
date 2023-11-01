@@ -53,14 +53,15 @@ const PowerPeak = () => {
           <div key={photo.id}>
             <motion.img
               layoutId={`image${photo.id}`}
-              initial={{ scale: 0.6 }}
-              animate={{ scale: 0.9 }}
+              initial={{ y: 200, scale: 0.6 }}
+              animate={{ y: 0, scale: 0.9 }}
               exit={{ scale: 1 }}
               transition={{
                 // type: 'spring',
                 // stifness: 100,
                 // mass: 1,
                 // damping: 10,
+                delay: 1,
                 duration: 0.4
               }}
               whileHover={{

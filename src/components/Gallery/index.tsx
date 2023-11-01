@@ -16,13 +16,20 @@ import power8 from '../../assets/images/powerpeak/powerpeak8.jpg'
 import power11 from '../../assets/images/powerpeak/powerpeak11.jpg'
 import power13 from '../../assets/images/powerpeak/powerpeak13.jpg'
 import ButtonTop from '../BtnTop'
+import { motion } from 'framer-motion'
 
 const Gallery = () => {
   const navigate = useNavigate()
 
   return (
     <>
-      <GalleryContent>
+      <GalleryContent
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 2 }}
+        exit={{ opacity: 0 }}
+      >
         <div className="column">
           <div
             className="photo"

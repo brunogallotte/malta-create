@@ -32,10 +32,21 @@ export const NavBar = styled.nav`
       color: ${colors.black};
       cursor: pointer;
       text-align: center;
+      transition: 0.8s;
+    }
+
+    a:hover {
+      color: ${colors.gray};
     }
 
     li {
       margin-right: 32px;
+    }
+
+    .bg-dark {
+      background-color: ${colors.black};
+      color: ${colors.white};
+      padding: 8px;
     }
   }
 `

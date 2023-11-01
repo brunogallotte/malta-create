@@ -7,12 +7,13 @@ export const BtnTop = styled.div`
   right: 35px;
   width: 50px;
   height: 50px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  mix-blend-mode: overlay;
 
   .arrow {
     border: solid ${colors.white};
