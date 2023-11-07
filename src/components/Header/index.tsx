@@ -22,6 +22,10 @@ const Header = () => {
   console.log(currentPath)
 
   const isTabActive = (tabId: any) => {
+    if (tabId === '/categories') {
+      // Verifica se a URL atual começa com "/categories"
+      return currentPath.startsWith('/categories')
+    }
     return currentPath === tabId
   }
 
