@@ -1,5 +1,6 @@
 import instagramIcon from '../../assets/images/icons/instagram.svg'
 import linkedinIcon from '../../assets/images/icons/linkedin.svg'
+import behanceIcon from '../../assets/images/icons/behance.svg'
 import { FooterColumn, FooterContainer, FooterRights } from './styles'
 
 const Footer = () => (
@@ -42,15 +43,25 @@ const Footer = () => (
               <span>_</span>follow-me
             </h4>
             <div>
-              <img src={instagramIcon} />
-              <img src={linkedinIcon} />
+              <div className="social-box">
+                <img src={instagramIcon} />
+                <p>@malta.create</p>
+              </div>
+              <div className="social-box">
+                <img src={linkedinIcon} />
+                <p>@malta.raphael</p>
+              </div>
+              <div className="social-box">
+                <img src={behanceIcon} />
+                <p>@malta.raphael</p>
+              </div>
             </div>
           </div>
         </FooterColumn>
       </div>
     </FooterContainer>
     <FooterRights>
-      <p>&copy; 2023 all rights reserved to Malta Create</p>
+      <p>&copy; 2023 all rights reserved to Malta Photography</p>
     </FooterRights>
   </>
 )

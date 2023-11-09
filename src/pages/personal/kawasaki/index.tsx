@@ -22,7 +22,6 @@ export const Kawasaki = () => {
 
   const openModal = (url: string, layoutId: string) => {
     setModal({ isVisible: true, url, layoutId })
-    console.log(layoutId)
   }
 
   const closeModal = () => {
@@ -53,9 +52,9 @@ export const Kawasaki = () => {
             <motion.div key={photo.id}>
               <motion.img
                 layoutId={`image${photo.id}`}
-                initial={{ scale: 0.6 }}
-                animate={{ scale: 0.9 }}
-                exit={{ scale: 1 }}
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 0.98 }}
+                exit={{ scale: 0.7 }}
                 transition={{
                   // type: 'spring',
                   // stifness: 100,
@@ -66,7 +65,7 @@ export const Kawasaki = () => {
                 whileHover={{
                   scale: 1,
                   transition: {
-                    duration: 1.5
+                    duration: 0.5
                   }
                 }}
                 src={photo.url}

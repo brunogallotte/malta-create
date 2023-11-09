@@ -9,7 +9,7 @@ export const HeaderBar = styled.div`
   height: 80px;
 
   img {
-    width: 170px;
+    width: 250px;
   }
 
   h1 {
@@ -26,7 +26,8 @@ export const NavBar = styled.nav`
 
     li,
     a {
-      font-weight: bold;
+      font-size: 18px;
+      font-weight: normal;
       letter-spacing: 4px;
       text-decoration: none;
       color: ${colors.black};

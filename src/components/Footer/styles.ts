@@ -60,8 +60,30 @@ export const FooterColumn = styled.div`
   }
 
   span {
-    color: ${colors.yellow};
+    color: ${colors.purple};
     margin-right: 4px;
+  }
+
+  .social-box {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 8px;
+
+    p {
+      cursor: pointer;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+    }
+
+    img {
+      max-width: 32px;
+      margin-right: 8px;
+      border: 1px solid white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
   }
 `
 
