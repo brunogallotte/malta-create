@@ -61,3 +61,19 @@ export const ModalContent = styled.div`
     max-width: 90%;
   }
 `
+
+export const BoxButton = styled.div`
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 8px;
+
+  button {
+    font-size: 16px;
+    background-color: ${colors.black};
+    color: ${colors.white};
+    border: none;
+    padding: 8px;
+    margin-right: 4px;
+    cursor: pointer;
+  }
+`

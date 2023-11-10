@@ -53,7 +53,7 @@ import power17 from '../assets/images/powerpeak/powerpeak17.jpg'
 import power18 from '../assets/images/powerpeak/powerpeak18.jpg'
 
 export type Photo = {
-  id?: number
+  id: number
   category?: string
   url?: string
 }
