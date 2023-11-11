@@ -59,21 +59,29 @@ export const ModalContent = styled.div`
     width: 100%;
     max-height: 100vh;
     max-width: 90%;
-  }
-`
 
-export const BoxButton = styled.div`
-  position: absolute;
-  bottom: 0;
-  padding-bottom: 8px;
+    + .box-buttons {
+      position: absolute;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
 
-  button {
-    font-size: 16px;
-    background-color: ${colors.black};
-    color: ${colors.white};
-    border: none;
-    padding: 8px;
-    margin-right: 4px;
-    cursor: pointer;
+      button {
+        padding: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        color: ${colors.white};
+        background-color: ${colors.black};
+        border: none;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.4s;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
   }
 `

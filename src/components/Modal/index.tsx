@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { BoxButton, ModalContainer, ModalContent } from './styles'
+import { ModalContainer, ModalContent } from './styles'
 import closeImg from '../../assets/images/icons/close.png'
 import { useEffect, useState } from 'react'
 import { Photo, photos } from '../../data/photoData'
@@ -13,8 +13,6 @@ interface ModalProps {
   kawasakiPhotos?: Photo[]
 }
 
-//Importei a galeria para fazer os teste, pensei em talvez fazer um estado de contador que perpassa pelo index e acessa a url
-//Ou criar um state que compara da um find no img url que veio pelo openModal, e assim podemos encontrar o objeto e manipular
 const kawasakiPhotos: Photo[] = photos.filter(function (photo) {
   return photo.category === 'Kawasaki'
 })
@@ -63,16 +61,12 @@ const Modal: React.FC<ModalProps> = ({ closeModal, imgUrl, layoutId }) => {
                 src={kawasakiPhotos[currentIndex].url}
                 layoutId={layoutId}
               />
+              <div className="box-buttons">
+                <button onClick={handlePrevious}>{'<'}</button>
+                <button onClick={handleNext}>{'>'}</button>
+              </div>
             </ModalContent>
             <div className="overlay" onClick={closeModal} />
-            <BoxButton>
-              <button type="button" onClick={handlePrevious}>
-                Anterior
-              </button>
-              <button type="button" onClick={handleNext}>
-                Próxima
-              </button>
-            </BoxButton>
           </ModalContainer>
         </motion.div>
       )}
