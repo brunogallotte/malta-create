@@ -62,19 +62,16 @@ export const ModalContent = styled.div`
 
     + .box-buttons {
       position: absolute;
-      width: 90%;
+      width: 95%;
       display: flex;
       justify-content: space-between;
       z-index: 1;
 
-      button {
-        padding: 10px;
-        font-weight: bold;
-        font-size: 16px;
-        color: ${colors.white};
-        background-color: ${colors.black};
-        border: none;
+      .button {
+        width: 128px;
         cursor: pointer;
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
+          brightness(100%) contrast(100%);
         opacity: 0.7;
         transition: opacity 0.4s;
 

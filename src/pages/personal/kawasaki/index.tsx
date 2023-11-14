@@ -23,7 +23,6 @@ export const Kawasaki = () => {
 
   const openModal = (url: string, layoutId: string, photoId: number) => {
     setModal({ isVisible: true, url, layoutId, photoId })
-    console.log(photoId)
   }
 
   const closeModal = () => {
@@ -87,7 +86,6 @@ export const Kawasaki = () => {
         openModal={openModal}
         closeModal={closeModal}
         imgUrl={modal.url}
-        kawasakiPhotos={kawasakiPhotos}
       />
       <ButtonTop />
     </>

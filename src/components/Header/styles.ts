@@ -34,6 +34,7 @@ export const NavBar = styled.nav`
       cursor: pointer;
       text-align: center;
       transition: 0.8s;
+      border-bottom: 3px solid white;
     }
 
     a:hover {
@@ -45,9 +46,10 @@ export const NavBar = styled.nav`
     }
 
     .bg-dark {
-      background-color: ${colors.black};
-      color: ${colors.white};
+      // background-color: ${colors.black};
+      color: ${colors.black};
       padding: 8px;
+      border-bottom: 3px solid black;
     }
   }
 `

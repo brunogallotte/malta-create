@@ -18,16 +18,16 @@ const PowerPeak = () => {
   const [modal, setModal] = useState({
     isVisible: false,
     url: '',
-    layoutId: ''
+    layoutId: '',
+    photoId: 0
   })
 
-  const openModal = (url: string, layoutId: string) => {
-    setModal({ isVisible: true, url, layoutId })
-    console.log(layoutId)
+  const openModal = (url: string, layoutId: string, photoId: number) => {
+    setModal({ isVisible: true, url, layoutId, photoId })
   }
 
   const closeModal = () => {
-    setModal({ isVisible: false, url: '', layoutId: '' })
+    setModal({ isVisible: false, url: '', layoutId: '', photoId: 0 })
   }
 
   return (
@@ -73,7 +73,7 @@ const PowerPeak = () => {
               src={photo.url}
               onClick={() => {
                 if (photo.url) {
-                  openModal(photo.url, `image${photo.id}`)
+                  openModal(photo.url, `image${photo.id}`, photo.id)
                 }
               }}
             />

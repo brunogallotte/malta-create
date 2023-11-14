@@ -6,7 +6,6 @@ import { HeaderBar, NavBar } from './styles'
 const Header = () => {
   const tabs = [
     { id: '/', label: 'overview' },
-    { id: '/categories', label: 'personal' },
     { id: '/contact', label: 'contact' }
   ]
 
@@ -42,7 +41,10 @@ const Header = () => {
                 <Link
                   to={tab.id}
                   className={`${
-                    isTabActive(tab.id) ? 'bg-dark' : 'transparent'
+                    (tab.id === '/' && currentPath.startsWith('/categories')) ||
+                    isTabActive(tab.id)
+                      ? 'bg-dark'
+                      : 'transparent'
                   }`}
                 >
                   {tab.label}
