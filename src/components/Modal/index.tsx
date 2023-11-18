@@ -3,7 +3,7 @@ import { ModalContainer, ModalContent } from './styles'
 import closeImg from '../../assets/images/icons/close.png'
 import arrowLeft from '../../assets/images/icons/angle-left.svg'
 import arrowRight from '../../assets/images/icons/angle-right.svg'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Photo, photos } from '../../data/photoData'
 import { useLocation } from 'react-router-dom'
 
@@ -26,7 +26,9 @@ const Modal: React.FC<ModalProps> = ({ closeModal, imgUrl, layoutId }) => {
     category: '',
     len: 0
   })
+
   const location = useLocation()
+  const imageRef = useRef<HTMLImageElement | null>(null)
 
   useEffect(() => {
     const newIndex = dataPhotos.findIndex((photo) => photo.url === imgUrl)
@@ -48,9 +50,6 @@ const Modal: React.FC<ModalProps> = ({ closeModal, imgUrl, layoutId }) => {
     const pathName = location.pathname.split('/')
     const pathNameSegment = pathName[2]
 
-    console.log(newIndex)
-    // para o powerpeak, o currentCategory.len esta dando menor
-
     const dataPhotoArrayCategory = dataPhotos.filter(
       (photo) => photo.category?.toLowerCase() === pathNameSegment
     )
@@ -65,7 +64,6 @@ const Modal: React.FC<ModalProps> = ({ closeModal, imgUrl, layoutId }) => {
 
   const handlePrevious = () => {
     const newIndex = currentIndex - 1
-
     const pathName = location.pathname.split('/')
     const pathNameSegment = pathName[2]
 
@@ -84,7 +82,30 @@ const Modal: React.FC<ModalProps> = ({ closeModal, imgUrl, layoutId }) => {
       setCurrentIndex(newIndex)
     }
   }
-  //Se o imgUrl estiver vazio carrega o link direto para evitar lag
+
+  //Lógica para avançar fotos nas setas do teclado
+  useEffect(() => {
+    // Defina o foco na imagem quando o componente for montado ou currentIndex for atualizado
+    if (imageRef.current) {
+      imageRef.current.focus()
+    }
+  }, [currentIndex])
+
+  const handleKeyVerification = (event: any) => {
+    if (event.key === 'ArrowRight') {
+      handleNext()
+    } else if (event.key === 'ArrowLeft') {
+      handlePrevious()
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyVerification)
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyVerification)
+    }
+  }, [imgUrl])
 
   return (
     <AnimatePresence>
@@ -93,19 +114,19 @@ const Modal: React.FC<ModalProps> = ({ closeModal, imgUrl, layoutId }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          tabIndex={0}
+          onKeyDown={handleKeyVerification}
         >
           <ModalContainer className={imgUrl ? 'is-visible' : ''}>
+            <div className="teste">
+              <img onClick={closeModal} className="close-icon" src={closeImg} />
+            </div>
             <ModalContent>
-              <header>
-                <img
-                  src={closeImg}
-                  alt="ícone de fechar"
-                  onClick={closeModal}
-                />
-              </header>
               <motion.img
                 src={dataPhotos[currentIndex].url}
                 layoutId={layoutId}
+                ref={imageRef}
+                tabIndex={-1}
               />
               <motion.div
                 className="box-buttons"

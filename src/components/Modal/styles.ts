@@ -24,6 +24,23 @@ export const ModalContainer = styled.div`
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
   }
+
+  .teste {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    .close-icon {
+      width: 32px;
+      margin-top: 16px;
+      margin-right: 16px;
+      cursor: pointer;
+    }
+  }
 `
 
 export const ModalContent = styled.div`
@@ -34,31 +51,15 @@ export const ModalContent = styled.div`
   position: relative;
   z-index: 1;
 
-  header {
-    position: absolute;
-    display: flex;
-    width: 90%;
-    height: 90vh;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-
-    img {
-      position: absolute;
-      height: 16px;
-      width: 16px;
-      margin: 4px;
-      top: 0;
-      right: 0;
-      cursor: pointer;
-    }
-  }
-
   > img {
     position: relative;
     width: 100%;
     max-height: 100vh;
     max-width: 90%;
+
+    &:focus {
+      outline: none;
+    }
 
     + .box-buttons {
       position: absolute;
