@@ -73,8 +73,6 @@ const Modal: React.FC<ModalProps> = ({ closeModal, imgUrl, layoutId }) => {
     )
     const categoryFirstId = dataPhotoArrayCategory[0].id
 
-    // continuar logica do first id
-
     if (
       pathNameSegment === currentCategory.category &&
       newIndex >= 0 &&
@@ -95,8 +93,6 @@ const Modal: React.FC<ModalProps> = ({ closeModal, imgUrl, layoutId }) => {
   }, [currentIndex])
 
   const handleKeyVerification = debounce((event: any) => {
-    console.log(imageRef)
-
     if (imageRef.current && imgUrl) {
       imageRef.current.focus()
     }
@@ -131,25 +127,19 @@ const Modal: React.FC<ModalProps> = ({ closeModal, imgUrl, layoutId }) => {
               <img onClick={closeModal} className="close-icon" src={closeImg} />
             </div>
             <ModalContent>
+              <img
+                onClick={handlePrevious}
+                className="button"
+                src={arrowLeft}
+              />
               <motion.img
                 src={dataPhotos[currentIndex].url}
                 layoutId={layoutId}
                 ref={imageRef}
                 tabIndex={-1}
+                className="modalImage"
               />
-              <motion.div
-                className="box-buttons"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 1 }}
-              >
-                <img
-                  onClick={handlePrevious}
-                  className="button"
-                  src={arrowLeft}
-                />
-                <img onClick={handleNext} className="button" src={arrowRight} />
-              </motion.div>
+              <img onClick={handleNext} className="button" src={arrowRight} />
             </ModalContent>
             <div className="overlay" onClick={closeModal} />
           </ModalContainer>

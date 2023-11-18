@@ -45,41 +45,28 @@ export const ModalContainer = styled.div`
 
 export const ModalContent = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   position: relative;
   z-index: 1;
 
-  > img {
+  .button {
+    width: 128px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
+      brightness(100%) contrast(100%);
+    opacity: 50%;
+    cursor: pointer;
+  }
+
+  .modalImage {
     position: relative;
     width: 100%;
-    max-height: 100vh;
+    max-height: 90vh;
     max-width: 90%;
 
     &:focus {
       outline: none;
-    }
-
-    + .box-buttons {
-      position: absolute;
-      width: 95%;
-      display: flex;
-      justify-content: space-between;
-      z-index: 1;
-
-      .button {
-        width: 128px;
-        cursor: pointer;
-        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
-          brightness(100%) contrast(100%);
-        opacity: 0.7;
-        transition: opacity 0.4s;
-
-        &:hover {
-          opacity: 1;
-        }
-      }
     }
   }
 `
