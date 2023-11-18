@@ -6,6 +6,7 @@ import arrowRight from '../../assets/images/icons/angle-right.svg'
 import { useEffect, useRef, useState } from 'react'
 import { Photo, photos } from '../../data/photoData'
 import { useLocation } from 'react-router-dom'
+import { debounce } from 'lodash'
 
 interface ModalProps {
   openModal: (url: string, layoutId: string, imgId: number) => void
@@ -84,20 +85,28 @@ const Modal: React.FC<ModalProps> = ({ closeModal, imgUrl, layoutId }) => {
   }
 
   //Lógica para avançar fotos nas setas do teclado
+
   useEffect(() => {
     // Defina o foco na imagem quando o componente for montado ou currentIndex for atualizado
     if (imageRef.current) {
       imageRef.current.focus()
+      console.log('foco atualizado')
     }
   }, [currentIndex])
 
-  const handleKeyVerification = (event: any) => {
+  const handleKeyVerification = debounce((event: any) => {
+    console.log(imageRef)
+
+    if (imageRef.current && imgUrl) {
+      imageRef.current.focus()
+    }
+
     if (event.key === 'ArrowRight') {
       handleNext()
     } else if (event.key === 'ArrowLeft') {
       handlePrevious()
     }
-  }
+  }, 300) // 500 milissegundos é o tempo de espera antes da próxima chamada
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyVerification)
@@ -105,7 +114,7 @@ const Modal: React.FC<ModalProps> = ({ closeModal, imgUrl, layoutId }) => {
     return () => {
       window.removeEventListener('keydown', handleKeyVerification)
     }
-  }, [imgUrl])
+  }, [imgUrl, currentIndex])
 
   return (
     <AnimatePresence>

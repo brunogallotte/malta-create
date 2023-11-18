@@ -11,6 +11,7 @@
     "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",
     "framer-motion": "^10.16.4",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.17.0",
@@ -46,6 +47,7 @@
   "devDependencies": {
     "@types/imagemin": "^8.0.3",
     "@types/imagemin-jpegtran": "^5.0.3",
+    "@types/lodash": "^4.14.201",
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
