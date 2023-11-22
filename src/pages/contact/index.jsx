@@ -4,23 +4,34 @@ import Header from '../../components/Header'
 import {
   AboutContent,
   AboutSection,
-  BoxSocialIcons,
+  BoxButton,
+  BoxSocial,
+  ClientContent,
   ClientsSection,
-  ProfileBox
+  ClientsText,
+  ContactContent,
+  ContactSection,
+  ContactText,
+  FormControl,
+  Input,
+  ProfileBox,
+  TextBox
 } from './styles'
 
-import cocaImg from '../../assets/images/logos-clientes/cocacola.webp'
-import dinnersImg from '../../assets/images/logos-clientes/dinnersclub.webp'
-import motorolaImg from '../../assets/images/logos-clientes/motorola.webp'
-import oliverImg from '../../assets/images/logos-clientes/oliver.webp'
-import volksImg from '../../assets/images/logos-clientes/volks.webp'
-import volvoImg from '../../assets/images/logos-clientes/volvo.webp'
-import cartagoImg from '../../assets/images/logos-clientes/cartago.webp'
+import byd from '../../assets/images/logos-clientes/byd.jpg'
+import dinners from '../../assets/images/logos-clientes/dinners.webp'
+import nissan from '../../assets/images/logos-clientes/nissan.png'
+import randolph from '../../assets/images/logos-clientes/randolph.webp'
+import oliver from '../../assets/images/logos-clientes/oliver.webp'
+import cartago from '../../assets/images/logos-clientes/cartago.webp'
 import raphaelImg from '../../assets/images/raphael.webp'
 import instaImg from '../../assets/images/icons/instagram.svg'
 import linkedinImg from '../../assets/images/icons/linkedin.svg'
 import behanceImg from '../../assets/images/icons/behance.svg'
 import SocialCard from '../../components/SocialCard'
+import kawasaki from '../../assets/images/kawasaki/kawasaki5.jpg'
+import nike from '../../assets/images/nike/nike4.jpg'
+import Button from '../../components/Button'
 
 const Contact = () => {
   return (
@@ -28,12 +39,10 @@ const Contact = () => {
       <Header />
       <AboutSection>
         <div className="container">
-          <div>
-            <h2>about me</h2>
-            <div className="underline" />
-          </div>
           <AboutContent>
-            <div>
+            <TextBox>
+              <h2>about me</h2>
+              <div className="underline" />
               <p>
                 Hey! My name is Raphael Malta and I&apos;m a Brazilian-born
                 automotive & lifestyle photographer. Since I was a child
@@ -45,32 +54,51 @@ const Contact = () => {
                 the biggest brands in the world, such as Volvo, Volkswagen,
                 Coca-Cola, Motorola, and others. If you want to work with me,
                 just send me an email. It would be a pleasure to hear about your
-                project! :) Contact info: hello@raphaelmalta.com
+                project! :) <br /> <br /> Contact info:{' '}
+                <b>hello@raphaelmalta.com</b>
               </p>
-              <BoxSocialIcons>
+              <BoxSocial>
                 <SocialCard />
-              </BoxSocialIcons>
-            </div>
+              </BoxSocial>
+            </TextBox>
             <ProfileBox>
               <img src={raphaelImg} />
               <h3>Raphael Malta</h3>
-              <span>\\photographer</span>
+              <span>/photographer</span>
             </ProfileBox>
           </AboutContent>
         </div>
       </AboutSection>
-      <ClientsSection className="container">
-        <h3>clients</h3>
-        <div>
-          <img src={volvoImg} alt="Logo Volvo" />
-          <img src={oliverImg} alt="Logo VolksWagen" />
-          <img src={motorolaImg} alt="Logo Motorola" />
-          <img src={cartagoImg} alt="Logo OliverPeoples" />
-          <img src={dinnersImg} alt="Logo DinnersClub" />
-          <img src={cocaImg} alt="Logo Cocacola" />
-          <img src={volksImg} alt="Logo Cartago" />
+      <ContactSection>
+        <div className="container">
+          <ContactContent>
+            <ContactText>
+              <h2>clients</h2>
+              <div className="underline" />
+              <ClientContent>
+                <img src={byd} />
+                <img src={dinners} />
+                <img src={nissan} />
+                <img src={randolph} />
+                <img src={oliver} />
+                <img src={cartago} />
+              </ClientContent>
+            </ContactText>
+            <FormControl>
+              <h3>talk with me</h3>
+              <div className="box-input">
+                <Input type="text" placeholder="name" />
+                <Input type="text" placeholder="lastname" />
+              </div>
+              <Input type="email" placeholder="e-mail" />
+              <textarea type="textarea" placeholder="your text" />
+              <BoxButton>
+                <Button />
+              </BoxButton>
+            </FormControl>
+          </ContactContent>
         </div>
-      </ClientsSection>
+      </ContactSection>
       <Footer />
     </>
   )
