@@ -53,9 +53,9 @@ export const Kawasaki = () => {
             <motion.div key={photo.id}>
               <motion.img
                 layoutId={`image${photo.id}`}
-                initial={{ scale: 0.9 }}
-                animate={{ scale: 0.98 }}
-                exit={{ scale: 0.7 }}
+                initial={{ scale: 1 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 1.2 }}
                 transition={{
                   // type: 'spring',
                   // stifness: 100,
@@ -64,9 +64,9 @@ export const Kawasaki = () => {
                   duration: 0.4
                 }}
                 whileHover={{
-                  scale: 1,
+                  scale: 1.01,
                   transition: {
-                    duration: 0.5
+                    duration: 0.7
                   }
                 }}
                 src={photo.url}
