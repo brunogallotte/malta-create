@@ -7,7 +7,6 @@ import { Photo, photos } from '../../../data/photoData'
 import { useState } from 'react'
 import Modal from '../../../components/Modal'
 import ButtonTop from '../../../components/BtnTop'
-import { ModuleDetectionKind } from 'typescript'
 import { motion } from 'framer-motion'
 
 const powerpeakPhotos: Photo[] = photos.filter(function (photo) {
@@ -53,8 +52,8 @@ const PowerPeak = () => {
           <div key={photo.id}>
             <motion.img
               layoutId={`image${photo.id}`}
-              initial={{ y: 200, scale: 0.9 }}
-              animate={{ y: 0, scale: 0.98 }}
+              initial={{ y: 200, scale: 1 }}
+              animate={{ y: 0, scale: 1 }}
               exit={{ scale: 1 }}
               transition={{
                 // type: 'spring',
@@ -65,9 +64,9 @@ const PowerPeak = () => {
                 duration: 0.4
               }}
               whileHover={{
-                scale: 1,
+                scale: 1.01,
                 transition: {
-                  duration: 1.5
+                  duration: 0.7
                 }
               }}
               src={photo.url}

@@ -53,8 +53,8 @@ export const Nike = () => {
             <div key={photo.id}>
               <motion.img
                 layoutId={`image${photo.id}`}
-                initial={{ scale: 0.9 }}
-                animate={{ scale: 0.98 }}
+                initial={{ scale: 1 }}
+                animate={{ scale: 1 }}
                 exit={{ scale: 0.7 }}
                 transition={{
                   // type: 'spring',
@@ -64,9 +64,9 @@ export const Nike = () => {
                   duration: 0.4
                 }}
                 whileHover={{
-                  scale: 1,
+                  scale: 1.01,
                   transition: {
-                    duration: 1.5
+                    duration: 0.7
                   }
                 }}
                 src={photo.url}

@@ -1,9 +1,5 @@
 import { GlobalCss } from './styles'
-import {
-  createBrowserRouter,
-  RouterProvider,
-  useLocation
-} from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home'
 import { Nike } from './pages/personal/nike'
 import { Kawasaki } from './pages/personal/kawasaki'

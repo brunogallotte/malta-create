@@ -3,13 +3,13 @@ import { colors } from '../../styles'
 
 export const FooterContainer = styled.footer`
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 250px;
   margin-top: 40px;
   background-color: ${colors.black};
   color: ${colors.gray};
+  width: 100%;
 
   img {
     background-color: #fff;
@@ -18,6 +18,12 @@ export const FooterContainer = styled.footer`
   > div {
     display: flex;
   }
+
+  .centralizer {
+    display: flex;
+    justify-content: center;
+    align-itens: center;
+  }
 `
 
 export const FooterColumn = styled.div`
@@ -25,11 +31,11 @@ export const FooterColumn = styled.div`
   flex-direction: column;
   align-items: center;
   width: 300px;
-  margin-right: 64px;
   min-height: 167px;
 
   h4 {
     text-transform: uppercase;
+    font-size: 18px;
     margin-bottom: 16px;
   }
 
@@ -44,6 +50,17 @@ export const FooterColumn = styled.div`
       text-transform: uppercase;
       margin-bottom: 16px;
       cursor: pointer;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: ${colors.gray};
+      transition: color 0.4s;
+
+      &:hover {
+        color: ${colors.white};
+      }
     }
   }
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
 
 export const ModalContainer = styled.div`
   position: fixed;
