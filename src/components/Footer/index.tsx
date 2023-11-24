@@ -2,29 +2,26 @@ import instagramIcon from '../../assets/images/icons/instagram.svg'
 import linkedinIcon from '../../assets/images/icons/linkedin.svg'
 import behanceIcon from '../../assets/images/icons/behance.svg'
 import { FooterColumn, FooterContainer, FooterRights } from './styles'
+import { Link } from 'react-router-dom'
 
 const Footer = () => (
   <>
     <FooterContainer>
-      <div className="container">
+      <div className="container centralizer">
         <FooterColumn>
           <h4>
-            <span>_</span>About
-          </h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Necessitatibus dolor velit consectetur, aspernatur officia suscipit
-            magnam asperiores ratione voluptatum mollitia sint.
-          </p>
-        </FooterColumn>
-        <FooterColumn>
-          <h4>
-            <span>_</span>personal works
+            <span>_</span>projects
           </h4>
           <ul>
-            <li>Kawasaki</li>
-            <li>Nike</li>
-            <li>Power Peak</li>
+            <li>
+              <Link to="/categories/kawasaki">Kawasaki</Link>
+            </li>
+            <li>
+              <Link to="/categories/nike">Nike</Link>
+            </li>
+            <li>
+              <Link to="/categories/powerpeak">Power Peak</Link>
+            </li>
           </ul>
         </FooterColumn>
         <FooterColumn>
@@ -32,9 +29,12 @@ const Footer = () => (
             <span>_</span>pages
           </h4>
           <ul>
-            <li>home</li>
-            <li>personal</li>
-            <li>contact</li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
           </ul>
         </FooterColumn>
         <FooterColumn>
