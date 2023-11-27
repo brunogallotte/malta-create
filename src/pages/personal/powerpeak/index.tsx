@@ -45,6 +45,7 @@ const PowerPeak = () => {
           type: 'tween',
           ease: 'anticipate',
           duration: 2,
+          delay: 0.2,
           flip: Infinity
         }}
       >

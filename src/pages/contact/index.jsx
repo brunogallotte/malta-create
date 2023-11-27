@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 
@@ -34,6 +36,10 @@ import nike from '../../assets/images/nike/nike4.jpg'
 import Button from '../../components/Button'
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <>
       <Header />

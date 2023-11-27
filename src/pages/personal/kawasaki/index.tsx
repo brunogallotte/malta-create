@@ -5,7 +5,7 @@ import { Photo, photos } from '../../../data/photoData'
 import { GalleryProject } from '../nike/styles'
 import photo from '../../../assets/images/kawasaki/kawasaki8.jpg'
 import Modal from '../../../components/Modal'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ButtonTop from '../../../components/BtnTop'
 import { motion } from 'framer-motion'
 
@@ -20,6 +20,10 @@ export const Kawasaki = () => {
     layoutId: '',
     photoId: 0
   })
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const openModal = (url: string, layoutId: string, photoId: number) => {
     setModal({ isVisible: true, url, layoutId, photoId })
