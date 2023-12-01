@@ -7,6 +7,12 @@ export const colors = {
   gray: '#ccc'
 }
 
+export const breakpoints = {
+  laptop: '1250px',
+  desktop: '1024px',
+  tablet: '768px'
+}
+
 export const GlobalCss = createGlobalStyle`
   * {
     margin: 0;
@@ -20,6 +26,10 @@ export const GlobalCss = createGlobalStyle`
     max-width: 1366px;
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      max-width: 80%;
+    }
   }
 
   ::-webkit-scrollbar {

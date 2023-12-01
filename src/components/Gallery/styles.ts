@@ -1,9 +1,21 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const GalleryContent = styled.div`
   display: flex;
   gap: 20px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 0 auto;
+  }
 
   .column {
     display: flex;

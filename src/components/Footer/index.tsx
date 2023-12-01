@@ -25,19 +25,6 @@ const Footer = () => (
           </ul>
         </FooterColumn>
         <FooterColumn>
-          <h4>
-            <span>_</span>pages
-          </h4>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </FooterColumn>
-        <FooterColumn>
           <div className="social-media">
             <h4>
               <span>_</span>follow-me
@@ -53,7 +40,7 @@ const Footer = () => (
               </div>
               <div className="social-box">
                 <img src={behanceIcon} />
-                <p>@malta.raphael</p>
+                <p>@maltaraphael</p>
               </div>
             </div>
           </div>

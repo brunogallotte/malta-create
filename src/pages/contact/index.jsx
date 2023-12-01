@@ -78,6 +78,18 @@ const Contact = () => {
       <ContactSection>
         <div className="container">
           <ContactContent>
+            <FormControl>
+              <h3>talk with me</h3>
+              <div className="box-input">
+                <Input type="text" placeholder="name" />
+                <Input type="text" placeholder="last name" />
+              </div>
+              <Input type="email" placeholder="e-mail" />
+              <textarea type="textarea" placeholder="your text" />
+              <BoxButton>
+                <Button />
+              </BoxButton>
+            </FormControl>
             <ContactText>
               <h2>clients</h2>
               <div className="underline" />
@@ -90,18 +102,6 @@ const Contact = () => {
                 <img src={cartago} />
               </ClientContent>
             </ContactText>
-            <FormControl>
-              <h3>talk with me</h3>
-              <div className="box-input">
-                <Input type="text" placeholder="name" />
-                <Input type="text" placeholder="lastname" />
-              </div>
-              <Input type="email" placeholder="e-mail" />
-              <textarea type="textarea" placeholder="your text" />
-              <BoxButton>
-                <Button />
-              </BoxButton>
-            </FormControl>
           </ContactContent>
         </div>
       </ContactSection>

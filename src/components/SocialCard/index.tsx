@@ -27,7 +27,7 @@ const SocialCard = () => {
       </a>
 
       <a
-        href="https://www.behance.net/raphaelmalta1"
+        href="https://www.behance.net/maltaraphael"
         className="socialContainer containerFour"
         target="_blank"
         rel="noreferrer"

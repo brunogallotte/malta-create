@@ -5,9 +5,14 @@ import nike from '../../assets/images/nike/nike3.jpg'
 import kawasaki from '../../assets/images/kawasaki/kawasaki3.jpg'
 import powerpeak from '../../assets/images/powerpeak/powerpeak1.jpg'
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 
 const Personal = () => {
   const navigate = useNavigate()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <>

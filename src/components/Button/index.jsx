@@ -1,5 +1,5 @@
 import { ButtonForm } from './styles'
 
-const Button = () => <ButtonForm>Send mail</ButtonForm>
+const Button = () => <ButtonForm>Send message</ButtonForm>
 
 export default Button

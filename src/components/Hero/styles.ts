@@ -3,7 +3,7 @@ import { colors } from '../../styles'
 
 export const HeroSection = styled.section<{ backgroundImage: string }>`
   height: 350px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   position: relative;
 
   .image {

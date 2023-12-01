@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const AboutSection = styled.section`
   min-height: 350px;
@@ -18,9 +18,14 @@ export const AboutSection = styled.section`
 export const AboutContent = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 32px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+    padding: 0px;
+  }
 `
 
 export const TextBox = styled.div`
@@ -28,6 +33,12 @@ export const TextBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 70%;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 100%;
+    margin-top: 32px;
+  }
 
   h2 {
     font-size: 32px;
@@ -36,7 +47,6 @@ export const TextBox = styled.div`
   }
 
   p {
-    width: 70%;
     margin-top: 16px;
     margin-bottom: 16px;
     line-height: 22px;
@@ -46,8 +56,13 @@ export const TextBox = styled.div`
 export const BoxSocial = styled.div`
   display: flex;
   justify-content: flex-start;
-  width: 70%;
+  width: 100%;
   margin-top: 16px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    margin-bottom: 16px;
+    justify-content: center;
+  }
 `
 
 export const ProfileBox = styled.div`
@@ -58,6 +73,10 @@ export const ProfileBox = styled.div`
   span {
     color: #ccc;
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    margin-bottom: 32px;
+  }
 `
 
 export const ClientContent = styled.div`
@@ -67,6 +86,10 @@ export const ClientContent = styled.div`
   grid-gap: 64px;
   margin-top: 16px;
 
+  @media (max-width: ${breakpoints.tablet}) {
+    grid-template-columns: 1fr 1fr;
+  }
+
   img {
     width: 128px;
   }
@@ -74,11 +97,23 @@ export const ClientContent = styled.div`
 
 export const ContactSection = styled.section`
   padding: 64px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 100%;
+    padding: 0px;
+  }
 `
 
 export const ContactContent = styled.div`
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: ${breakpoints.laptop}) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+  }
 `
 
 export const ContactText = styled.div`
@@ -87,6 +122,11 @@ export const ContactText = styled.div`
   justify-content: center;
   align-items: center;
   width: 50%;
+
+  @media (max-width: ${breakpoints.laptop}) {
+    width: 100%;
+    margin-top: 64px;
+  }
 
   h2 {
     text-transform: lowercase;
@@ -113,13 +153,21 @@ export const FormControl = styled.form`
   border-radius: 8px;
   width: 50%;
 
+  @media (max-width: ${breakpoints.laptop}) {
+    width: 100%;
+  }
+
   .box-input {
     display: flex;
     justify-content: space-between;
     width: 100%;
 
+    @media (max-width: ${breakpoints.tablet}) {
+      display: block;
+    }
+
     input {
-      width: 300px;
+      width: 100%;
     }
   }
 
