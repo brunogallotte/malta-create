@@ -4,7 +4,7 @@ import Hero from '../../../components/Hero'
 import photo from '../../../assets/images/powerpeak/powerpeak4.jpg'
 import { GalleryProject } from '../nike/styles'
 import { Photo, photos } from '../../../data/photoData'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Modal from '../../../components/Modal'
 import ButtonTop from '../../../components/BtnTop'
 import { motion } from 'framer-motion'
@@ -28,6 +28,10 @@ const PowerPeak = () => {
   const closeModal = () => {
     setModal({ isVisible: false, url: '', layoutId: '', photoId: 0 })
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <>
