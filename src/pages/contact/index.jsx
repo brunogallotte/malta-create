@@ -79,7 +79,7 @@ const Contact = () => {
         <div className="container">
           <ContactContent>
             <FormControl>
-              <h3>talk with me</h3>
+              <h3>send me a message</h3>
               <div className="box-input">
                 <Input type="text" placeholder="name" />
                 <Input type="text" placeholder="last name" />

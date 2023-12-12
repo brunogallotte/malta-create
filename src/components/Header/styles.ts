@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { breakpoints, colors } from '../../styles'
+import { NavLink } from 'react-router-dom'
 
 export const HeaderBar = styled.div`
   display: flex;
@@ -20,6 +21,10 @@ export const HeaderBar = styled.div`
     line-height: 0px;
     align-items: center;
   }
+
+  .fixed {
+    position: fixed;
+  }
 `
 
 export const HeaderRow = styled.div`
@@ -37,42 +42,8 @@ export const HeaderRow = styled.div`
 `
 
 export const NavBar = styled.nav`
-  ul {
-    display: flex;
-    list-style: none;
-    text-transform: uppercase;
-
-    li,
-    a {
-      font-size: 18px;
-      font-weight: normal;
-      letter-spacing: 4px;
-      text-decoration: none;
-      color: ${colors.black};
-      cursor: pointer;
-      text-align: center;
-      transition: 0.8s;
-      border-bottom: 3px solid white;
-    }
-
-    a:hover {
-      color: ${colors.gray};
-    }
-
-    @media (max-width: ${breakpoints.tablet}) {
-      display: none;
-    }
-
-    li {
-      margin-right: 32px;
-    }
-
-    .bg-dark {
-      // background-color: ${colors.black};
-      color: ${colors.black};
-      padding: 8px;
-      border-bottom: 3px solid black;
-    }
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
   }
 `
 
@@ -96,6 +67,12 @@ export const Hamburguer = styled.div`
 export const NavMobile = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: ${colors.white};
+  height: 100%;
+  width: 100%;
+  z-index: 1;
 
   @media (min-width: ${breakpoints.tablet}) {
     display: none;
@@ -109,7 +86,7 @@ export const NavMobile = styled.div`
 
   a {
     color: ${colors.black};
-    font-size: 18px;
+    font-size: 36px;
     text-decoration: none;
     cursor: pointer;
     text-transform: uppercase;

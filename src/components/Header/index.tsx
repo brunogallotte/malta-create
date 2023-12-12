@@ -1,32 +1,15 @@
-import { useEffect, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useState } from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import maltaLogo from '../../assets/images/logo.png'
 import { HeaderBar, NavBar, Hamburguer, HeaderRow, NavMobile } from './styles'
 import { AnimatePresence, motion } from 'framer-motion'
+import { NavLinks } from '../ItemLinks'
 
 const Header = () => {
-  const tabs = [
-    { id: '/', label: 'overview' },
-    { id: '/contact', label: 'contact' }
-  ]
-
-  const [activeTab, setActiveTab] = useState('/')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const location = useLocation()
   const currentPath = location.pathname
-
-  useEffect(() => {
-    setActiveTab(currentPath)
-  }, [currentPath])
-
-  const isTabActive = (tabId: any) => {
-    if (tabId === '/categories') {
-      // Verifica se a URL atual começa com "/categories"
-      return currentPath.startsWith('/categories')
-    }
-    return currentPath === tabId
-  }
 
   const ToggleMenu = () => {
     if (isMenuOpen) {
@@ -51,24 +34,7 @@ const Header = () => {
             </Link>
           </h1>
           <NavBar>
-            <ul>
-              {tabs.map((tab) => (
-                <li key={tab.id}>
-                  <Link
-                    to={tab.id}
-                    className={`${
-                      (tab.id === '/' &&
-                        currentPath.startsWith('/categories')) ||
-                      isTabActive(tab.id)
-                        ? 'bg-dark'
-                        : 'transparent'
-                    }`}
-                  >
-                    {tab.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <NavLinks />
           </NavBar>
         </HeaderBar>
       </HeaderRow>
