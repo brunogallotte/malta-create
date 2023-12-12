@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { breakpoints, colors } from '../../styles'
-import { NavLink } from 'react-router-dom'
 
 export const HeaderBar = styled.div`
   display: flex;
@@ -22,8 +21,8 @@ export const HeaderBar = styled.div`
     align-items: center;
   }
 
-  .fixed {
-    position: fixed;
+  .stick {
+    position: sticky;
   }
 `
 
@@ -31,6 +30,7 @@ export const HeaderRow = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: ${colors.white};
   
   @media (max-width: ${breakpoints.tablet}) {
     flex: 1;
@@ -38,6 +38,12 @@ export const HeaderRow = styled.div`
 
     ul {
       display: none;
+    }
+
+    .open {
+      position: sticky;
+      top: 0;
+      z-index: 20;
     }
 `
 
@@ -50,6 +56,7 @@ export const NavBar = styled.nav`
 export const Hamburguer = styled.div`
   width: 32px;
   cursor: pointer;
+  z-index: 21;
 
   span {
     height: 2px;
@@ -70,9 +77,9 @@ export const NavMobile = styled.div`
   align-items: center;
   position: fixed;
   background-color: ${colors.white};
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  z-index: 1;
+  z-index: 20;
 
   @media (min-width: ${breakpoints.tablet}) {
     display: none;

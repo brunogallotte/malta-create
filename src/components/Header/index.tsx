@@ -1,19 +1,18 @@
 import { useState } from 'react'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import maltaLogo from '../../assets/images/logo.png'
 import { HeaderBar, NavBar, Hamburguer, HeaderRow, NavMobile } from './styles'
 import { AnimatePresence, motion } from 'framer-motion'
 import { NavLinks } from '../ItemLinks'
+import { colors } from '../../styles'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const location = useLocation()
-  const currentPath = location.pathname
-
   const ToggleMenu = () => {
     if (isMenuOpen) {
       setIsMenuOpen(false)
+      window.scrollTo(0, 0)
     } else {
       setIsMenuOpen(true)
     }
@@ -21,12 +20,22 @@ const Header = () => {
 
   return (
     <>
-      <HeaderRow>
+      <HeaderRow
+        as={motion.div}
+        initial={false}
+        animate={{
+          backgroundColor: isMenuOpen ? colors.white : 'transparent',
+          position: isMenuOpen ? 'sticky' : 'relative',
+          top: isMenuOpen ? 0 : 'auto',
+          zIndex: isMenuOpen ? 20 : 0
+        }}
+        transition={{ duration: 0.4 }}
+      >
         <HeaderBar className="container">
-          <Hamburguer onClick={ToggleMenu}>
-            <span />
-            <span />
-            <span />
+          <Hamburguer as={motion.div} onClick={ToggleMenu}>
+            <motion.span layoutId="span" initial={{ y: 0 }} />
+            <motion.span layoutId="span" initial={{ y: 0 }} />
+            <motion.span layoutId="span" initial={{ y: 0 }} />
           </Hamburguer>
           <h1>
             <Link to="/">
@@ -39,21 +48,30 @@ const Header = () => {
         </HeaderBar>
       </HeaderRow>
       {isMenuOpen ? (
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           <NavMobile
+            key="element"
             as={motion.div}
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.5 }}
+            initial={{ y: -360 }}
+            animate={{ y: 0 }}
+            exit={{ y: -360 }}
+            transition={{ duration: 0.4 }}
           >
             <ul>
-              <li>
+              <motion.li
+                initial={{ opacity: 0, y: -15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.4 }}
+              >
                 <Link to="/">Overview</Link>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, y: -15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.4 }}
+              >
                 <Link to="/contact">Contact</Link>
-              </li>
+              </motion.li>
             </ul>
           </NavMobile>
         </AnimatePresence>
