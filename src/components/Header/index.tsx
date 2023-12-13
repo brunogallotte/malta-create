@@ -32,10 +32,10 @@ const Header = () => {
         transition={{ duration: 0.4 }}
       >
         <HeaderBar className="container">
-          <Hamburguer as={motion.div} onClick={ToggleMenu}>
-            <motion.span layoutId="span" initial={{ y: 0 }} />
-            <motion.span layoutId="span" initial={{ y: 0 }} />
-            <motion.span layoutId="span" initial={{ y: 0 }} />
+          <Hamburguer onClick={ToggleMenu}>
+            <span />
+            <span />
+            <span />
           </Hamburguer>
           <h1>
             <Link to="/">

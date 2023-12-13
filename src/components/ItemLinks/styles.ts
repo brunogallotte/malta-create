@@ -23,10 +23,6 @@ export const ContainerNavLinks = styled.div`
       margin-right: 16px;
     }
 
-    a:hover {
-      color: ${colors.gray};
-    }
-
     @media (max-width: ${breakpoints.tablet}) {
       display: none;
     }

@@ -9,8 +9,6 @@ import {
   BoxButton,
   BoxSocial,
   ClientContent,
-  ClientsSection,
-  ClientsText,
   ContactContent,
   ContactSection,
   ContactText,
@@ -27,12 +25,7 @@ import randolph from '../../assets/images/logos-clientes/randolph.webp'
 import oliver from '../../assets/images/logos-clientes/oliver.webp'
 import cartago from '../../assets/images/logos-clientes/cartago.webp'
 import raphaelImg from '../../assets/images/raphael.webp'
-import instaImg from '../../assets/images/icons/instagram.svg'
-import linkedinImg from '../../assets/images/icons/linkedin.svg'
-import behanceImg from '../../assets/images/icons/behance.svg'
 import SocialCard from '../../components/SocialCard'
-import kawasaki from '../../assets/images/kawasaki/kawasaki5.jpg'
-import nike from '../../assets/images/nike/nike4.jpg'
 import Button from '../../components/Button'
 
 const Contact = () => {

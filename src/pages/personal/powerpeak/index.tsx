@@ -1,7 +1,7 @@
 import Footer from '../../../components/Footer'
 import Header from '../../../components/Header'
 import Hero from '../../../components/Hero'
-import photo from '../../../assets/images/powerpeak/powerpeak4.jpg'
+import photo from '../../../assets/images/powerpeak/powerpeak4.png'
 import { GalleryProject } from '../nike/styles'
 import { Photo, photos } from '../../../data/photoData'
 import { useEffect, useState } from 'react'

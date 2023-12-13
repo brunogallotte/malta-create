@@ -1,9 +1,9 @@
 import Footer from '../../components/Footer'
 import { GalleryContent } from '../../components/Gallery/styles'
 import Header from '../../components/Header'
-import nike from '../../assets/images/nike/nike3.jpg'
-import kawasaki from '../../assets/images/kawasaki/kawasaki3.jpg'
-import powerpeak from '../../assets/images/powerpeak/powerpeak1.jpg'
+import nike from '../../assets/images/nike/nike3.png'
+import kawasaki from '../../assets/images/kawasaki/kawasaki3.png'
+import powerpeak from '../../assets/images/powerpeak/powerpeak1.png'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 
