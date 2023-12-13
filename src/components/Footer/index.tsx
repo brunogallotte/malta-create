@@ -40,18 +40,30 @@ const Footer = () => (
               <span>_</span>follow-me
             </h4>
             <div>
-              <div className="social-box">
+              <motion.div
+                className="social-box"
+                initial={{ x: 0 }}
+                whileHover={{ x: 5 }}
+              >
                 <img src={instagramIcon} />
                 <p>@malta.create</p>
-              </div>
-              <div className="social-box">
+              </motion.div>
+              <motion.div
+                className="social-box"
+                initial={{ x: 0 }}
+                whileHover={{ x: 5 }}
+              >
                 <img src={linkedinIcon} />
                 <p>@malta.raphael</p>
-              </div>
-              <div className="social-box">
+              </motion.div>
+              <motion.div
+                className="social-box"
+                initial={{ x: 0 }}
+                whileHover={{ x: 5 }}
+              >
                 <img src={behanceIcon} />
                 <p>@maltaraphael</p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </FooterColumn>

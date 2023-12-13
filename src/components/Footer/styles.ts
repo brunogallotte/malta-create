@@ -108,6 +108,7 @@ export const FooterColumn = styled.div`
     width: 1px;
     background-color: #e4e4e7;
     opacity: 0.3;
+    box-shadow: 0 0 1000px 100px rgba(82, 82, 91, 0.7);
 
     @media (max-width: ${breakpoints.tablet}) {
       display: none;
