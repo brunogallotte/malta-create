@@ -45,14 +45,14 @@ const Contact = () => {
               as={motion.div}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.5 }}
             >
               <h2>about me</h2>
               <div className="underline" />
               <motion.p
-                initial={{ scale: 0.9 }}
+                initial={{ scale: 0.95 }}
                 animate={{ scale: 1 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.5 }}
               >
                 Hey! My name is Raphael Malta and I&apos;m a Brazilian-born
                 automotive & lifestyle photographer. Since I was a child
@@ -79,7 +79,7 @@ const Contact = () => {
                 as={motion.div}
                 initial={{ x: 40 }}
                 animate={{ x: 0 }}
-                transition={{ duration: 1.5, ease: 'easeIn' }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
               >
                 <SocialCard />
               </BoxSocial>
@@ -137,6 +137,7 @@ const Contact = () => {
             </ContactText>
           </ContactContent>
         </div>
+        <span className="pattern" />
       </ContactSection>
       <Footer />
     </>

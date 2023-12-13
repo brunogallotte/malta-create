@@ -118,23 +118,62 @@ export const ClientContent = styled.div`
 `
 
 export const ContactSection = styled.section`
+  position: relative;
   padding: 64px;
 
   @media (max-width: ${breakpoints.tablet}) {
     width: 100%;
     padding: 0px;
   }
+
+  .pattern {
+    z-index: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    --color: #e1e1e1;
+    background-color: #f3f3f3;
+    background-image: linear-gradient(
+        0deg,
+        transparent 24%,
+        var(--color) 25%,
+        var(--color) 26%,
+        transparent 27%,
+        transparent 74%,
+        var(--color) 75%,
+        var(--color) 76%,
+        transparent 77%,
+        transparent
+      ),
+      linear-gradient(
+        90deg,
+        transparent 24%,
+        var(--color) 25%,
+        var(--color) 26%,
+        transparent 27%,
+        transparent 74%,
+        var(--color) 75%,
+        var(--color) 76%,
+        transparent 77%,
+        transparent
+      );
+    background-size: 55px 55px;
+    opacity: 0.5;
+  }
 `
 
 export const ContactContent = styled.div`
   display: flex;
   justify-content: space-around;
+  gap: 32px;
 
   @media (max-width: ${breakpoints.laptop}) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 64px;
+    padding-top: 64px;
   }
 `
 
@@ -144,6 +183,10 @@ export const ContactText = styled.div`
   justify-content: center;
   align-items: center;
   width: 50%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  z-index: 1;
 
   @media (max-width: ${breakpoints.laptop}) {
     width: 100%;
@@ -174,6 +217,8 @@ export const FormControl = styled.form`
   background-color: ${colors.black};
   border-radius: 8px;
   width: 50%;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  z-index: 1;
 
   @media (max-width: ${breakpoints.laptop}) {
     width: 100%;
@@ -183,28 +228,28 @@ export const FormControl = styled.form`
     display: flex;
     justify-content: space-between;
     width: 100%;
+    gap: 16px;
 
     @media (max-width: ${breakpoints.tablet}) {
       display: block;
-    }
-
-    input {
-      width: 100%;
     }
   }
 
   textarea {
     width: 100%;
+    height: 200px;
     padding: 16px;
     font-size: 16px;
     margin: 6px;
     border-radius: 4px;
-    border: none;
+    border: 1px solid #3f3f46;
+    background-color: #27272a;
+    color: #d1d5db;
     resize: none;
-    height: 200px;
 
     &:focus {
       outline: none;
+      border: 1px solid #71717a;
     }
   }
 
@@ -221,10 +266,13 @@ export const Input = styled.input`
   margin-top: 8px;
   margin-bottom: 8px;
   border-radius: 4px;
-  border: 1 px solid #fff;
+  border: 1px solid #3f3f46;
+  background-color: #27272a;
+  color: #d1d5db;
 
   &:focus {
     outline: none;
+    border: 1px solid #71717a;
   }
 `
 

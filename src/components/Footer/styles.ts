@@ -2,14 +2,15 @@ import styled from 'styled-components'
 import { colors } from '../../styles'
 
 export const FooterContainer = styled.footer`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 250px;
-  margin-top: 40px;
   background-color: ${colors.black};
   color: ${colors.gray};
   width: 100%;
+  z-index: 1;
 
   img {
     background-color: #fff;
