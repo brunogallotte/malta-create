@@ -195,7 +195,6 @@ export const ContactText = styled.div`
     padding: 32px;
     width: 100%;
     margin-top: 32px;
-    margin-bottom: 32px;
   }
 
   h2 {

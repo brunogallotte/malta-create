@@ -4,6 +4,7 @@ import { breakpoints } from '../../../styles'
 export const GalleryProject = styled.div`
   column-count: 3;
   column-gap: 8px;
+  padding-bottom: 32px;
 
   @media (max-width: ${breakpoints.desktop}) {
     display: grid;

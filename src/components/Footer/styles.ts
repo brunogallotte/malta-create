@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors, fontSize } from '../../styles'
 
 export const FooterContainer = styled.footer`
   position: relative;
@@ -10,6 +10,9 @@ export const FooterContainer = styled.footer`
   background-color: ${colors.black};
   color: ${colors.gray};
   width: 100%;
+  border-top: 2px solid #e4e4e7;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
   z-index: 1;
 
   img {
@@ -32,11 +35,11 @@ export const FooterColumn = styled.div`
   flex-direction: column;
   align-items: center;
   width: 300px;
-  min-height: 167px;
 
   h4 {
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: ${fontSize.medium};
+    color: ${colors.white};
     margin-bottom: 16px;
   }
 
@@ -56,23 +59,19 @@ export const FooterColumn = styled.div`
 
     a {
       text-decoration: none;
-      color: ${colors.gray};
+      color: ${colors.white};
       transition: color 0.4s;
-
-      &:hover {
-        color: ${colors.white};
-      }
     }
   }
 
   .social-media {
-    min-height: 167px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     p {
       text-transform: uppercase;
+      color: ${colors.white};
       margin-bottom: 4px;
     }
   }
@@ -87,7 +86,7 @@ export const FooterColumn = styled.div`
     flex-direction: row;
     text-align: center;
     font-size: 12px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 
     p {
       cursor: pointer;
@@ -101,6 +100,17 @@ export const FooterColumn = styled.div`
       border: 1px solid white;
       border-radius: 4px;
       cursor: pointer;
+    }
+  }
+
+  .separator {
+    height: 100%;
+    width: 1px;
+    background-color: #e4e4e7;
+    opacity: 0.3;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      display: none;
     }
   }
 `

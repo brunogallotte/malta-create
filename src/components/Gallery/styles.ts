@@ -4,6 +4,7 @@ import { breakpoints, colors } from '../../styles'
 export const GalleryContent = styled.div`
   display: flex;
   gap: 20px;
+  margin-bottom: 32px;
 
   @media (max-width: ${breakpoints.desktop}) {
     display: grid;
@@ -14,6 +15,7 @@ export const GalleryContent = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     width: 90%;
+    padding-bottom: 32px;
     margin: 0 auto;
   }
 
