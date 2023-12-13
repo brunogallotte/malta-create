@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints, colors, fontSize } from '../../styles'
 
 export const ModalContainer = styled.div`
   position: fixed;
@@ -50,12 +51,40 @@ export const ModalContent = styled.div`
   position: relative;
   z-index: 1;
 
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+  }
+
+  .mobileArrows {
+    display: none;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 16px;
+
+      button {
+        font-size: ${fontSize.normal};
+        background: ${colors.black};
+        border: none;
+        color: ${colors.white};
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+
   .button {
     width: 128px;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
       brightness(100%) contrast(100%);
     opacity: 50%;
     cursor: pointer;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      display: none;
+    }
   }
 
   .modalImage {

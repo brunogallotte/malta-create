@@ -139,6 +139,10 @@ const Modal: React.FC<ModalProps> = ({ closeModal, imgUrl, layoutId }) => {
                 tabIndex={-1}
                 className="modalImage"
               />
+              <div className="mobileArrows">
+                <button onClick={handlePrevious}>Anterior</button>
+                <button onClick={handleNext}>Próxima</button>
+              </div>
               <img onClick={handleNext} className="button" src={arrowRight} />
             </ModalContent>
             <div className="overlay" onClick={closeModal} />
