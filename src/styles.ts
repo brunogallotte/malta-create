@@ -7,6 +7,13 @@ export const colors = {
   gray: '#ccc'
 }
 
+export const fontSize = {
+  small: '14px',
+  normal: '16px',
+  medium: '18px',
+  big: '32px'
+}
+
 export const breakpoints = {
   laptop: '1250px',
   desktop: '1024px',

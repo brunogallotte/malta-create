@@ -3,6 +3,8 @@ import { useEffect } from 'react'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 
+import { MailCheck } from 'lucide-react'
+
 import {
   AboutContent,
   AboutSection,
@@ -112,7 +114,10 @@ const Contact = () => {
         <div className="container">
           <ContactContent>
             <FormControl>
-              <h3>send me a message</h3>
+              <div className="flex">
+                <MailCheck className="icon" />
+                <h3>send me a message</h3>
+              </div>
               <div className="box-input">
                 <Input type="text" placeholder="name" />
                 <Input type="text" placeholder="last name" />

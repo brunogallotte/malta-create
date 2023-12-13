@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints, colors } from '../../styles'
+import { breakpoints, colors, fontSize } from '../../styles'
 
 export const AboutSection = styled.section`
   min-height: 350px;
@@ -90,10 +90,13 @@ export const BoxSocial = styled.div`
 export const ProfileBox = styled.div`
   h3 {
     margin-top: 8px;
+    font-size: ${fontSize.medium};
   }
 
   span {
+    font-size: ${fontSize.small};
     color: #ccc;
+    opacity: 0.4;
   }
 
   @media (max-width: ${breakpoints.tablet}) {
@@ -189,8 +192,10 @@ export const ContactText = styled.div`
   z-index: 1;
 
   @media (max-width: ${breakpoints.laptop}) {
+    padding: 32px;
     width: 100%;
-    margin-top: 64px;
+    margin-top: 32px;
+    margin-bottom: 32px;
   }
 
   h2 {
@@ -255,7 +260,21 @@ export const FormControl = styled.form`
 
   h3 {
     color: #fff;
+    font-size: ${fontSize.medium};
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     margin-bottom: 16px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    color: #fff;
   }
 `
 
