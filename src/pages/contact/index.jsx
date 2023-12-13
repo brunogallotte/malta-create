@@ -18,6 +18,8 @@ import {
   TextBox
 } from './styles'
 
+import { motion } from 'framer-motion'
+
 import byd from '../../assets/images/logos-clientes/byd.jpg'
 import dinners from '../../assets/images/logos-clientes/dinners.webp'
 import nissan from '../../assets/images/logos-clientes/nissan.png'
@@ -39,10 +41,19 @@ const Contact = () => {
       <AboutSection>
         <div className="container">
           <AboutContent>
-            <TextBox>
+            <TextBox
+              as={motion.div}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
               <h2>about me</h2>
               <div className="underline" />
-              <p>
+              <motion.p
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 1 }}
+              >
                 Hey! My name is Raphael Malta and I&apos;m a Brazilian-born
                 automotive & lifestyle photographer. Since I was a child
                 I&apos;ve loved to take photos and it was only natural that I
@@ -54,21 +65,50 @@ const Contact = () => {
                 Coca-Cola, Motorola, and others. If you want to work with me,
                 just send me an email. It would be a pleasure to hear about your
                 project! :) <br /> <br /> Contact info:{' '}
-                <b>hello@raphaelmalta.com</b>
-              </p>
-              <BoxSocial>
+                <strong>
+                  hello@raphaelmalta.com
+                  <motion.div
+                    className="sublime"
+                    initial={{ width: 0 }}
+                    animate={{ width: '100%' }}
+                    transition={{ duration: 1.5, ease: 'easeInOut' }}
+                  />
+                </strong>
+              </motion.p>
+              <BoxSocial
+                as={motion.div}
+                initial={{ x: 40 }}
+                animate={{ x: 0 }}
+                transition={{ duration: 1.5, ease: 'easeIn' }}
+              >
                 <SocialCard />
               </BoxSocial>
             </TextBox>
-            <ProfileBox>
+            <ProfileBox
+              as={motion.div}
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.5 }}
+            >
               <img src={raphaelImg} />
               <h3>Raphael Malta</h3>
               <span>/photographer</span>
             </ProfileBox>
+            <motion.span
+              className="blur"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 2 }}
+            />
           </AboutContent>
         </div>
       </AboutSection>
-      <ContactSection>
+      <ContactSection
+        as={motion.section}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         <div className="container">
           <ContactContent>
             <FormControl>

@@ -16,6 +16,7 @@ export const AboutSection = styled.section`
 `
 
 export const AboutContent = styled.div`
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -26,6 +27,26 @@ export const AboutContent = styled.div`
     flex-direction: column;
     padding: 0px;
   }
+
+  strong {
+    position: relative;
+  }
+
+  .sublime {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 3px;
+    background-color: ${colors.purple};
+  }
+
+  .blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 100px #2e1065;
+    z-index: 0;
+  }
 `
 
 export const TextBox = styled.div`
@@ -34,6 +55,7 @@ export const TextBox = styled.div`
   justify-content: center;
   align-items: center;
   width: 70%;
+  z-index: 1;
 
   @media (max-width: ${breakpoints.tablet}) {
     width: 100%;
