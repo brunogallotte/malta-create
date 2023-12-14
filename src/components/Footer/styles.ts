@@ -15,6 +15,10 @@ export const FooterContainer = styled.footer`
     0 8px 10px -6px rgb(0 0 0 / 0.1);
   z-index: 1;
 
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
+  }
+
   img {
     background-color: #fff;
   }
@@ -123,6 +127,10 @@ export const FooterRights = styled.div`
   height: 32px;
   background-color: #111;
   color: ${colors.gray};
+
+  @media (max-width: ${breakpoints.tablet}) {
+    margin-top: 32px;
+  }
 
   p {
     text-transform: uppercase;
