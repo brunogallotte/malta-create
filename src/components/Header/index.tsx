@@ -32,16 +32,16 @@ const Header = () => {
         transition={{ duration: 0.4 }}
       >
         <HeaderBar className="container">
-          <Hamburguer onClick={ToggleMenu}>
-            <span />
-            <span />
-            <span />
-          </Hamburguer>
           <h1>
             <Link to="/">
               <img src={maltaLogo} alt="Malta Photography" />
             </Link>
           </h1>
+          <Hamburguer onClick={ToggleMenu}>
+            <span />
+            <span />
+            <span />
+          </Hamburguer>
           <NavBar>
             <NavLinks />
           </NavBar>

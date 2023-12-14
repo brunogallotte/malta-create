@@ -82,6 +82,7 @@ const Contact = () => {
                 initial={{ x: 40 }}
                 animate={{ x: 0 }}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
+                className="hideOnMobile"
               >
                 <SocialCard />
               </BoxSocial>
@@ -95,6 +96,15 @@ const Contact = () => {
               <img src={raphaelImg} />
               <h3>Raphael Malta</h3>
               <span>/photographer</span>
+              <BoxSocial
+                as={motion.div}
+                initial={{ x: 40 }}
+                animate={{ x: 0 }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+                className="hideOnDesktop"
+              >
+                <SocialCard />
+              </BoxSocial>
             </ProfileBox>
             <motion.span
               className="blur"

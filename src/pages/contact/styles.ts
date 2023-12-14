@@ -84,6 +84,19 @@ export const BoxSocial = styled.div`
   @media (max-width: ${breakpoints.tablet}) {
     margin-bottom: 16px;
     justify-content: center;
+    display: flex;
+  }
+
+  &.hideOnMobile {
+    @media (max-width: ${breakpoints.tablet}) {
+      display: none;
+    }
+  }
+
+  &.hideOnDesktop {
+    @media (min-width: ${breakpoints.tablet}) {
+      display: none;
+    }
   }
 `
 
@@ -100,6 +113,7 @@ export const ProfileBox = styled.div`
   }
 
   @media (max-width: ${breakpoints.tablet}) {
+    margin-top: 32px;
     margin-bottom: 32px;
   }
 `
